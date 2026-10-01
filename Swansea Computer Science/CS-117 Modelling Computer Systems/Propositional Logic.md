@@ -272,15 +272,12 @@ P, Q statements
 **Syntax trees**
  ![[Screenshot 2026-10-01 at 12.39.04 PM.png]]
 
+---
+
 **Well-formed Formulas (wff)**
 A syntactically-correct formula is called a **well-formed formula (wff)**
 
-For example, the string of symbols ¬(P ∨ ( ∧ (Q, R) → P)))
+For example, the string of symbols `¬(P ∨ ( ∧ (Q, R) → P)))`
 fails to be a well-formed formula.
 
-This could be simplified 
-
-**Exercise**
-> Defining Further Propositional Operators
-
-The *exclusive or* operation p 
+This could be simplified as `¬ (P ∨ ((Q ∧ R) → P))`
