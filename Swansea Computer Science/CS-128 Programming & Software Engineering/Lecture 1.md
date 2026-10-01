@@ -103,4 +103,3 @@ Strongly and Statically Typed.
 - Coursework marking:
 	- https://csautograder.swansea.ac.uk
 - Login to both with usual Swansea ID.
-
