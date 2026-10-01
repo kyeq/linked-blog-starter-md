@@ -27,6 +27,7 @@ The following are **not** propositions:
 - Is there life on Mars? – *Not a statement, because the question itself doesn't have a truth value.*
 - What this sentence says is false. – *Paradoxical - you can't assign a truth value.*
 
+---
 #### Deductions / Inferences
 A deduction, or inference, is when you deduce, or infer, one statement (a conclusion) from one or more other statements (premises)
 
@@ -59,7 +60,7 @@ Propositional formulas use five basic propositional connective (operations):
 3. or ( ∨ )
 4. implies ( → )
 5. is equivalent to ( ↔ )
-
+---
 #### Negation
 *Connective:* Negation
 *Symbol:* ¬ p
@@ -90,6 +91,7 @@ Propositional formulas use five basic propositional connective (operations):
 
 ***This is known as the Law of Double Negation***
 
+---
 #### Conjuction
 *Connective:* Conjunction
 *Symbol:* p ∧ q (p and q are called conjuncts)
@@ -104,6 +106,7 @@ Propositional formulas use five basic propositional connective (operations):
 - *This man is dead and my watch has stopped*
 - Not only is this man dead, but so is my watch
 
+---
 #### Disjunction
 *Connective:* Disjunction
 *Symbol:* p ∨ q (p and q are called disjuncts)
@@ -121,7 +124,7 @@ Propositional formulas use five basic propositional connective (operations):
 
 *(Possibly the man is dead and the watch has stopped)*
 
-
+---
 #### Conjunction and Disjunction
 Exercise
 Are the following disjunctions true or false?
@@ -156,6 +159,7 @@ Sometimes an **exclusive** interpretation is intended when we use the word "or",
 
 This kind of disjunction, written ⊕, is called **exclusive or***
 
+---
 #### Implication
 *Connective:* Implication
 *Symbol:* p → q
@@ -185,3 +189,97 @@ JoelHappy → AmandaHappy or as AmandaHappy → JoelHappy
 1. Joel is happy whenever Amanda is happy – AmandaHappy → JoelHappy
 2. Joel is happy only if Amanda is happy – JoelHappy → AmandaHappy – *Joel can ONLY be happy, if AmandaHappy*
 3. Joel is happy unless Amanda is not happy – AmandaHappy → JoelHappy
+
+---
+#### Equivalence
+*Connective:* equivalence
+*Symbol:* p ⇔ q
+*Pronounced:* "p if, and only if, q"
+
+in English:
+- p if, and only if, q
+- p is equivalent to q
+- p is a necessary and sufficient for q
+
+**Example:** Let TrainEnter stand for "The train enters the tunnel" and TunnelClear stand for "The tunnel is clear"
+
+Then TrainEnter ⇔ TunnelClear says
+"The train enters the tunnel if, and only if, the tunnel is clear"
+
+This statement is false if one of these two scenarios holds:
+- The train enters the tunnel while the tunnel is not clear;
+- The tunnel is clear but the train does not enter
+
+p ⇔ q is equivalent to (p ⇔ q) ∧ (q → p) 
+*Saying*:
+- p is true, and only if, q is true
+*Is the same as saying:*
+- if p is true then q is true and if q is true then p is true
+
+p → q is equivalent to ¬ p ∨ q
+*Saying:*
+if p is. true then q is true
+*Is the same as saying:*
+either p is false or q is true
+
+---
+> **Refresher** ♻️
+
+**Definition**
+A propositional formula is either
+- An atomic formula, typically an uppercase variable P, Q, R etc.; or
+- A compound formula build up using connectives
+
+Two special atomic formulas:
+- **true** (the proposition which is always true)
+- **false** (the proposition which is always false)
+
+P ∨ Q → R could be read in two very different ways:
+- (P ∨ Q) → R
+- or
+- P ∨ (Q → R)
+
+We define a precedence for connectives to reduce the need for parentheses
+(and increased readability)
+
+![[Screenshot 2026-10-01 at 12.37.27 PM.png]]
+
+
+P, Q statements
+
+> **P → Q**
+   if P then Q
+   Q if P
+   P only if Q
+
+1. "Joel is happy only if Amanda is happy"
+2. "Joel is ==only happy== if Amanda is happy"
+	 ^ *These are equivalent*
+
+3. I will only trust you if you did not lie to me about the cake.
+4. I will trust you only if you did not lie to me about the cake.
+	 ^ *These are equivalent*
+
+5. You will only pass the exam if you understand propositional logic.
+6. You will pass the exam only if you understand propositional logic.
+	 ^ *These are equivalent*
+
+> It does NOT say: if you understand propositional logic, then you will pass.
+> it DOES say: if you don't understand propositional logic, then you won't pass the exam.
+
+¬Q → ¬P
+
+**Syntax trees**
+ ![[Screenshot 2026-10-01 at 12.39.04 PM.png]]
+
+**Well-formed Formulas (wff)**
+A syntactically-correct formula is called a **well-formed formula (wff)**
+
+For example, the string of symbols ¬(P ∨ ( ∧ (Q, R) → P)))
+
+failed to be a well-formed formula.
+
+**Exercise**
+> Defining Further Propositional Operators
+
+The *exclusive or* operation p 
