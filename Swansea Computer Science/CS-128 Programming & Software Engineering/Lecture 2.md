@@ -43,3 +43,38 @@ Java is an object-orientated language.
 - Object-Orientated – procedural + 'objects' and 'classes'
 
 **Abstraction**
+
+> [!NOTE] Abstraction
+> "Pick the kettle up, take the lid off, fill it with water, plug it in, turn it on, and wait for the water to boil" – adding more detail, rather than "boil the kettle"
+
+> 💡 suggestion: start off in labs on Friday – use basic tools – once comfortable, move on.
+> don't just stick to the basics. 
+> ==**READ CHAPTER 0 AND CHAPTER 1**==
+
+> Try your best to try new software and different methods.
+> Don't just stick to just what you know.
+
+
+#### Java
+>Java is for running things.
+>Java-c is for compiling it.
+
+**Use Java version 25**
+*Ensure that you also have Java-c (compiler)*
+
+You need a decent text-editor.
+*Recommended to use Notepad++.*
+
+**Code Example**
+> You MUST write the class as the exact name as the file.
+> It's best practice to stick to exactly the same.
+
+- Start it with a capital, do not put an underscore, nor a space. 
+
+```java
+public class HelloWorld {
+	public static void main(String[] args) {
+		System.out.println("Hello World"); 
+	}
+}	
+```
