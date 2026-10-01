@@ -78,3 +78,46 @@ public class HelloWorld {
 	}
 }	
 ```
+
+> This is a straight-line / sequential program
+
+- First you must compile your program:
+	- `javac HelloWorld.java`
+
+- It will then output another file... "HelloWorld.class"
+
+- You can then run your file...
+	- `java HelloWorld`
+
+**Code Example with Data**
+
+> Example #1
+```java
+public class HelloWorld {
+	public static void main(String[] args) {
+		String text;
+		text = "Hello World";
+		System.out.println(text); 
+		text = "Hi there";
+		System.out.println(text);
+		
+		int value = 5;
+		value = value + 1;
+	}
+}	
+```
+
+>Example #2
+```java
+/*
+Program to convert gallons to litres
+*/
+public class VolumeConverter {
+	public static void main(String[] args) {
+		int volumeInGallons = 5; //start with lower case, others capitalised
+		
+		System.out.println(volumeInGallons
+		+ " in litres is " + volumeInGallons * 1.456);
+	}
+}	
+```
