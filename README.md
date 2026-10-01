@@ -1,6 +1,2 @@
 # linked-blog-starter-md
 These are the markdown files for the [linked-blog-starter](https://github.com/matthewwong525/linked-blog-starter) repository
-
-hello, new edits are here.
-
-yes, they're all here.
