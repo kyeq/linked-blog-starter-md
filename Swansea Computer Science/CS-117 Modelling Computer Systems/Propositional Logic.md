@@ -276,8 +276,9 @@ P, Q statements
 A syntactically-correct formula is called a **well-formed formula (wff)**
 
 For example, the string of symbols ¬(P ∨ ( ∧ (Q, R) → P)))
+fails to be a well-formed formula.
 
-failed to be a well-formed formula.
+This could be simplified 
 
 **Exercise**
 > Defining Further Propositional Operators
