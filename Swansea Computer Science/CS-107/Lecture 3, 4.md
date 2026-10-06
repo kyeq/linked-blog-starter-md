@@ -1,4 +1,4 @@
-#CS117 
+#CS107 
 
 ### Data Representation
 Data representation is the process of presenting information in a meaningful way, allowing for easy understanding
@@ -70,3 +70,97 @@ Convert (239)10 to base 16 (hex):
 14 / 16 = 0, remainder 14 (E)
 
 = (EF)16
+
+### Lecture 4 (Binary Arithmetic)
+
+**Binary Addition**
+
+```
+	  Binary Arithmetic - Addition
+
+	  1010111
+	+ 1001011
+	 --------
+	 10100010
+	        
+	   111111
+	  1010101
+	+ 0001111
+	 --------
+	  1100100
+```
+
+**Binary Subtraction**
+```
+1101
+0011
+----
+1010
+```
+
+**Binary Multiplication**
+```
+ 101
+1011
+ 101
+ 
+ 111
+1011
+----
+
+
+```
+
+**TO DO**
+```
+  1101
++ 1001
+  ----
+  10110
+  
+
+  1000
+- 0101
+  ----
+  
+  
+  0101
+- 1000
+  ----
+```
+
+**Why does it matter?**
+being able to reliably store and manipulate information is essential, its the key of succcess to modern computers, and developing harware to do this is tricky.
+
+its much easier to differentiate two levels of electrical voltage (on/off) which maeks the binary system so attractive.
+
+often, we treat low voltage as 0, and high voltage as 1.
+
+We call a single binary value a bit, or binary digit
+we then group bits together into a byte (which often refers to 8 bits)
+we often use some multiple of 8 bits to represent data in our machine and modern computers are designed to carry out instructions. we call this a "word", the "word size" of the computer defines the maximum number of bits the processor can operate on at a time .
+
+data can be complex – we must do conversions.
+
+### Two's Compliment
+
+**Goals for today**
+- Data on a finite machine
+- Representation of whole numbers
+- Representation and arithmetic on negative numbers
+
+```
+   0101
+ + 1010
+   ----
+   
+   1101
+   1110
+ + ----
+   11011
+   
+   0010
+   0011
+ - ----
+  -0001 / 1111
+```
