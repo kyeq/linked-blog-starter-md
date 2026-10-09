@@ -20,6 +20,11 @@ _Quick revision of binary arithmetic and negative numbers from the previous lect
 
 _Carries, borrows and leading zeros._
 
+- addition: work right to left. 1 + 1 = 10, so write 0 and carry 1 into the next column.
+- A carry off the top adds a bit: 10110110 + 01101101 = 100100011, that is 182 + 109 = 291
+- subtraction: borrow from the column to the left, and the borrow cascades through any zeros.
+- Leading zeros carry no value, so 1000000 - 0000001 = 111111, that is 64 - 1 = 63
+
 #### Binary multiplication
 
 _Shift and add method._
@@ -27,6 +32,8 @@ _Shift and add method._
 #### Representing negative numbers
 
 _Sign-magnitude vs two's complement._
+
+first bit for the sign, the rest for the magnitude. it gives two zeros.
 
 #### Two's complement and overflow
 
@@ -41,6 +48,14 @@ _Why every representation is a compromise between detail and storage._
 #### Continuous world vs finite machine
 
 _How a fixed number of bits limits the values we can store._
+
+**Continuous world**
+The world is infinite. Find a way to manage these infinite values into a more manageable storage solution.
+The world is continuous – there are infinitely many values.
+
+**Finite machine**
+the number of bits we have gives us a limit on the number of bits we can represent.
+n bits give 2 patterns, so 8 bits hold 256 values an 24-bit colour holds 16.7 million colours.
 
 #### Range and precision
 
@@ -70,6 +85,13 @@ _What a bit is and how bits are grouped._
 
 _Numbers with a whole part and a fractional part._
 
+real numbers are any numbers of any degree of precision.
+some whole number or fractional part.
+
+note that fraction part may be infinite.
+
+in decimal, positions to the right of the point are tenths, hundredths, thousandths, etc.
+
 #### Real numbers in decimal
 
 _Whole and fractional parts, and the place values to the right of the point._
@@ -77,6 +99,10 @@ _Whole and fractional parts, and the place values to the right of the point._
 #### Real numbers in binary
 
 _The same idea in base 2._
+
+
+positions to the right of the **radix point** are:
+> The name of the "point" is actually the "Radix Point"
 
 ##### Place values after the radix point
 
@@ -89,6 +115,9 @@ _Worked example of converting a binary fraction._
 #### Floating point representation
 
 _Storing a real number as sign, mantissa and exponent._
+A real number can be defined by the formula:
+sign - mantissa - base *exponent*
+
 
 ##### The formula
 
@@ -201,8 +230,10 @@ _The lecture objectives for the second half._
 _How a physical property of light becomes numbers._
 
 #### What is colour?
+- an attribute caused by things reflecting or emitting certain wavelengths of light.
 
 #### How we perceive colour
+we perceive colour with photoreceptors in our eyes, these cells respond to particular wavelengths and our brain interprets this as a colour.
 
 #### RGB colour model
 
