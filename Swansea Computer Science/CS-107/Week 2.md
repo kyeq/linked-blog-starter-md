@@ -247,6 +247,7 @@ _Colour values shown on the slides._
 
 ##### Hexadecimal colour codes
 
+
 #### Other colour encodings
 
 _Alternatives to RGB and where each is used._
