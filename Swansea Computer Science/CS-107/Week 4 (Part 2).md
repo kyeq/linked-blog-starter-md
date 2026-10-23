@@ -70,4 +70,18 @@ Steps required:
 
 ![[Pasted image 20261023102759.png|490]]
 
+...
 
+![[Pasted image 20261023103312.png|492]]
+
+You can express the code in hexadecimal chunks, though its hard to memorise.
+
+![[Pasted image 20261023103331.png|493]]
+
+There are particular ways to represent data as letters.
+
+![[Pasted image 20261023103345.png|499]]
+
+...
+
+![[Pasted image 20261023103403.png]]
