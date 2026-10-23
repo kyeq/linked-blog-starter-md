@@ -26,3 +26,48 @@ A virtual, hypothetical machine designed to contain the important features of a 
 
 Pep/9: A virtual computer designed by Stanley Warford that has 40 machine-language instructions.
 
+### Instruction format
+- Operation code: specifies which instruction is to be carried out.
+- Register specifier: Specifies which register is to be used (for our purposes it always specifies the accumulator 0)
+- Addressing-mode: specifier Says how to interpret the operand part of the instruction
+
+#### Addressing mode
+Indicates whether value is stored in operand specifier or memory.
+
+**Addressing modes: immediate**
+![[Pasted image 20261023101714.png|403]]
+
+**Addressing modes: direct**
+![[Pasted image 20261023101748.png|414]]
+
+#### What can you do in this language?
+
+**Operation codes, important!**
+![[Pasted image 20261023101820.png|369]]
+
+#### Input and output in Pep/9
+we can use **memory-mapped** I/O, where our input and output devices are connected to physical memory locations.
+
+In Pep/9:
+- Input device is at location FC15
+- output device is at location FC16
+
+**to get input in:**
+load the value within FC15 to the accumulator
+
+**to get output out:**
+Load a value into the accumulator, and then store it to FC16
+
+> Both of these only accept a single byte of information. No more!
+
+### Example program 1
+Let's print the classic "Hello World" string to the output device.
+
+Steps required:
+- Load the letter H into the accumulator.
+- Store the value in the accumulator to the output device.
+- Load the letter e into the accumulator.
+
+![[Pasted image 20261023102759.png|490]]
+
+
