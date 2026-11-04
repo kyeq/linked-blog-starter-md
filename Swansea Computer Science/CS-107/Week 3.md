@@ -1,5 +1,8 @@
 #CS107 
 
+#### Real numbers in binary
+- Bits after the radix point
+
 ### Representing Data and Storing it
 - One RGB colour requires to use **8 bits** - a totality of 24 bits (8 bits / colour)
 - A high-def image (1920 x 1080), or 2,073,600 pixels 
