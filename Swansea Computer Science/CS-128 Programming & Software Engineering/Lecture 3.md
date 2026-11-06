@@ -57,8 +57,6 @@ Arithmetic operations will be followed in the same order as BIDMAS.
 - Addition
 - Subtraction
 
-![[Screenshot 2026-10-08 at 22.25.50.png]]
-
 You **must** also specify the data type when doing arithmetic.
 ```java
 double divideDouble = 5/4; // returns 1.25
