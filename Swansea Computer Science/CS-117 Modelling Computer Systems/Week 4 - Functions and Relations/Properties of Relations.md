@@ -69,4 +69,39 @@ $C)\:1\to2\quad2\to1\quad1\to1\quad2\to2$
 
 - A: A is transitive, there's only one two-step path ($1\to2\to3$) and it's shortcut ($1\to3$) is there (the only shortcut needed), so it's **transitive**.
 - B: B isn't transitive, it's the same two-step path as A ($1\to2\to3$), but the shortcut ($1\to3$) is missing, so it's **not transitive**.
-- C: 
+- C: Because 1 and 2 point at each other, *and* each has a loop, there are lots of two-step paths. *Every shortcut is there*, so it's **transitive.**
+
+#### Exercise (check all 5 properties)
+
+Take the set:
+$A=\{cat, dog, bird, rat\}$
+The relation: $x$ is related to $y$ if they share a letter.
+
+***Step 1: find the arrows***
+Take each pair of words and check whether they have a letter in common. Don't forget each word compared with itself.
+
+*The words that share letter(s):*
+$cat\to rat$
+$rat\to cat$
+$dog\to bird$
+$bird\to dog$
+$bird\to rat$
+$rat\to bird$
+
+*The full list (all words that share letters as a list):*
+$cat\to cat\quad dog\to dog\quad bird\to bird\quad rat\to rat$
+$cat\to rat\quad rat\to cat$
+$dog\to bird\quad bird\to dog$
+$bird\to rat\quad rat\to bird$
+
+- It's reflexive – every word has a loop.
+	- Every word shares a letter with itself.
+- It's symmetric – every word has a return arrow.
+	- If cat shares a letter with rat, then rat shares that same letter wth cat. The letter doesn't care which word you start from.
+- No, it's not transitive
+	- dog has d, o, g and rat has r, a, t so they share nothing.
+
+A quick way to spot these: read the rule out loud.
+- **Reflexive:** does "x shares a letter with x" always make sense? *Yes*
+- **Symmetric:** does swapping x and y change the meaning of "x shares a letter with y"? *No*
+
