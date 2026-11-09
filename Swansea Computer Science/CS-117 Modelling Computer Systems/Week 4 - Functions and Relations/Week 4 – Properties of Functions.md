@@ -58,10 +58,41 @@ Note the order: g ∘ f means “f first, then g”, which reads right to left.
 
 ![[Screenshot 2026-10-21 at 11.29.43.png|448]]
 
-**The three rules**
+### The Three Rules
 
 1. If f and g are both one-to-one, then g ∘ f is one-to-one.
 2. If f and g are both onto, then g ∘ f is onto.
 3. If f and g are both bijective, then g ∘ f is bijective.
+
+#### Cardinality
+Cardinality just means how many things are in a set.
+It's written with straight lines
+
+$A = \{1,2,3\}\text{ so }|A|=3$
+$B=\{x,y\}\text{ so }|B|=2$
+
+**The three rules to remember**
+1. **One-to-one ->** $|A|\leq|B|$
+2. **Onto ->** $|A|\geq|B|$
+3. **Bijective ->** $|A|=|B|$
+
+***The rules only tell you what's impossible, not what's guaranteed!***
+
+*Example:*
+$$
+\text{1. } |A|=4 , |B|=6\\
+\text{2. } |A|=7 , |B|=3\\
+\text{3. } |A|=5 , |B|=5
+$$
+**1**
+- can't be onto – A is not greater than B
+- possibly one-to-one
+
+**2**
+- can't be one-to-one – A is greater than B
+- possibly onto
+
+**3**
+- not definitely bijective, definitely one of the two
 
 Rule 3 follows directly from rules 1 and 2, since bijective means one-to-one and onto.
