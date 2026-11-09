@@ -14,8 +14,8 @@ A relationship is just arrows with no rules. Something can have no arrows, one a
 
 We write $xRy$ to mean "x is related to y", or simply "there's an arrow from x to y"
 
+----
 ### Part 1: Reflexive
-
 **Reflexive** means everything has an arrow to itself. A loop on every element.
 *Example:* the relation "is the same height as". Everyone is the same height as themselves, so it's reflexive!
 
@@ -34,9 +34,9 @@ $C)\:1\to1\quad1\to3$
 - B: there's no loops at all, so it's **irreflexive**.
 - 1 has a loop but 2 and 3 don't, so it's **neither**.
 
+----
 ### Part 2: Symmetric
-Symmetric means every arrow has a return arrow. if $x\to y$, then
-$y\to x$ must be there too.
+Symmetric means every arrow has a return arrow. if $x\to y$, then $y\to x$ must be there too.
 
 *Example:* "is a sibling of". If Sam is Jo's sibling, then Jo is sam's sibling, so the arrows always come in pairs. It's symmetric!
 
@@ -54,6 +54,7 @@ $C)\:1\to2\quad2\to1\quad2\to3$
 - B: $1\to2$ has no $2\to1$, and $2\to3$ has no $3\to2$, so there are no return arrows anywhere. It's **antisymmetric**.
 - C: $1\to2$ and $2\to1$ are a pair, but $2\to3$ has no $3\to2$. One arrow is missing its return, so it's not symmetric. And because 1 and 2 point at each other, it's not antisymmetric either. It's **neither**.
 
+----
 ### Part 3: Transitive
 Transitive means that if you can get somewhere in two steps, there must be a direct shortcut. If $x\to y$ and $y\to z$, then $x\to z$ must be there too.
 
@@ -105,6 +106,7 @@ A quick way to spot these: read the rule out loud.
 - **Reflexive:** does "x shares a letter with x" always make sense? *Yes*
 - **Symmetric:** does swapping x and y change the meaning of "x shares a letter with y"? *No*
 
+----
 #### Exercise 2 (check all 5 properties)
 Take an ancestor – for example, a dad, a grandad
 
@@ -121,6 +123,7 @@ An ancestor:
 - Transitive – **yes**
 	- Transitive needs every two-step path to have a shortcut. If x is y's ancestor and y is z's ancestor, then x is further back up z's family line, so x is z's ancestor too. The shortcut always exists.
 
+----
 ### Part 4: Orders
 An order is just a relation that has a particular combination of the properties you already know.
 
@@ -140,11 +143,120 @@ $\subseteq\text{on}\:\text{sets}$ – **partial order ✅ & total order ❌** �
 #### Example, with "is an ancestor of"
 "is an ancestor of"
 - *Not a partial order* because it's not reflexive.
-	- A partial order needs all three properties.
+	 A partial order needs all three properties.
 - *Not a total order* because a total order has to be a partial order first.
-	- You and a random stranger aren't ancestors of each other in either directed, so you're unconnected.
+	 You and a random stranger aren't ancestors of each other in either directions, so you're unconnected.
 
+#### Example, with n on $\mathbb{N}$
+$0\to0$
+$1\to1$
+$2\to2$
+$3\to3$
+$\dots$
 
+With the set of n on $\mathbb{N}$, each number is related to **only itself.**
+This set is:
+- **Reflexive** – every element has an arrow to itself.
+- **Antisymmetric** – there's no return arrows between different elements.
+- **Transitive** – the shortcut needed $1\to1\dots$ so, every shortcut is there.
 
+That makes it a **partial order.**
 
+#### Example, with the relations $\mathbb{U}$
+>Note: $\mathbb{U}$ is the universal relation – its a set where every number has an arrow to every number, including itself.
+
+The set of $\mathbb{U}$ is:
+- **Reflexive** – every element has an arrow to itself.
+- **Symmetric** – every element of $x$ is related to $y$.
+- **Transitive** – every element is related to one another, each shortcut is present.
+
+Because it's reflexive, **not** antisymmetric, and transitive – it's not a **partial order**, or a **total order** as a set must be partial before it's a full order.
+
+#### Example, with the relations $\mathbb{P}$
+>Note: $\mathbb{P}$ (parity, P) is the relation where two numbers are related if they're **both even** or **both odd**.
+>$2 \to 4,\ 4 \to 2,\ 1 \to 3,\ 3 \to 1,\ 2 \to 2,\ \dots$ but NOT $1 \rightarrow 2$
+
+parity, $\mathbb{P}$ is:
+- **Reflexive** – every number has the same parity as itself. 2 is even and 2 is even, so $2\to2$ works.
+- **Symmetric** – every element connected has an arrow connected back.
+- **Transitive** – $2\to4$ means 2 and 4 are both even, $4\to6$ means 4 and 6 are both even, so 2 and 6 must be both even too, giving the shortcut $2\to6$!
+
+parity, $\mathbb{P}$ isn't antisymmetric though – $2\to4$ and $4\to2$ is a return arrow between different numbers.
+
+This means that parity, $\mathbb{P}$ is not a partial order, and so not a to
+
+----
+### Part 5: Equivalence relations
+
+**Equivalence relation = reflexive + symmetric + transitive**
+You can compare that with a partial order:
+- **Partial order:** reflexive + antisymmetric + transitive, which puts things in order.
+- **Equivalence:** reflexive + symmetric + transitive, which groups things that match.
+
+An equivalence relation is like saying "is the same kind as". 
+Things that are related belong in the same group.
+
+1. **Identity** (I) 
+	 **Reflexive:** every number has a loop ($1\to1$, $2\to2$, $\dots$)
+	 **Symmetric:** the only arrows are loops, and a loop is its own return arrow.
+	 **Transitive:** the only two-step paths are like $1\to1\to1$, and the shortcut $1\to1$ exists.
+
+2. **Universal (U)**
+	 **Reflexive:** every number is related to everything, including itself.
+	 **Symmetric:** every possible arrow exists, so every return arrow exists too.
+	 **Transitive:** every possible arrow exists, so every shortcut exists.
+3. **Parity (P)**
+	 **Reflexive:** every number has the same parity as itself.
+	 **Symmetric:** if x and y are both even (or both odd), then y and x are too.
+	 **Transitive:** if x matches y and y matches z, then x matches z.
+
+**Why they're all equivalences**
+- **Identity:** every number is in its own group, like $\{0\}, \{1\}, \{2\}\dots$
+- **Universal:** all numbers are in **one big group.**
+- **Parity: two groups**, the evens and the odds.
+
+----
+
+### Part 6: Partitions
+A partition is **splitting a set into groups**, and the groups must follow three rules:
+1. **No empty groups.** Every group has at least one thing in it.
+2. **No overlaps.** Nothing appears in two groups.
+3. **Nothing left out.** Everything in the set is in some group.
+
+*Example*
+For $A=\{1,2,3,4\}$
+**Partitions:**
+- $\{1,2\}\;\{3,4\}$
+- $\{1,3,4\}\;\{2\}$
+
+**Not partitions:**
+- $\{1\}, \{3,4\}$, because **2 is left out**
+- $\{1,2\}\;\{2,3,4\}$ because **2 is in two groups**
+
+##### How this links to equivalence relations
+Every equivalence relation **splits a set into groups,** and every partition gives you an equivalence relation, where things are related if they're in the same group.
+- **Parity** splits $\mathbb{N}$ into {evens} and {odds},
+- **Same month of birth** splits people into up to 12 groups, one per month.
+
+Each group is called an **equivalence class**.
+
+*Exercise*
+Which of these are partitions of $A=\{a,b,c,d\}$?
+1. $\{a\}, \{b, c\}, \{d\}$ – **partition of $A$**
+2. $\{a, c\}, \{b,d\}$ – **partition of $A$**
+3. $\{a,c\}, \{b\}$ – **not a partition of $A$** – not every element in the set is in some group.
+4. $\{a,b,c,d\}$ – **partition of $A$**
+5. $\{a,c\}, \{b\}, \{c,d\}$ – **not a partition of $A$** – c is in a group twice.
+6. $\{a\}, \{b\}, \{c\}, \{d\}$ – **partition of $A$**
+
+*Exercise*
+How many partitions are in the set $A=\{1, 2, 3\}$?
+1. $\{1, 2, 3\}$
+2. $\{1\}, \{2\}, \{3\}$
+3. $\{1, 2\}, \{3\}$
+4. $\{1\}, \{2, 3\}$
+5. $\{1, 3\}, \{2\}$
+
+There are a total of 5 different partitions.
+**Never forget that the whole set on its own, (e.g. $\{1, 2, 3\}$) is a set on its own!**
 
