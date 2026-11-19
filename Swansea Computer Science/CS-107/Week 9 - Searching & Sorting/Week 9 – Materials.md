@@ -16,9 +16,9 @@ added: 2026-11-17
 	- save as `Lecture 27 - Mergesort & Quicksort.pdf`
 
 ## Lab
-- [ ] **Worksheet 9: Searching and sorting** – 🔒 still locked on Canvas
+- [ ] **Worksheet 9: Searching and sorting** – 🔒 unlocks **Mon 23 Nov, 09:00**
 	- save as `Worksheet 9 - Searching & Sorting.pdf` once it unlocks
-- Solutions – still locked on Canvas.
+- Solutions – 🔒 unlock **Thu 3 Dec, 09:00**.
 
 ## Extra materials (Canvas pages)
 - Searching and Sorting: Materials
