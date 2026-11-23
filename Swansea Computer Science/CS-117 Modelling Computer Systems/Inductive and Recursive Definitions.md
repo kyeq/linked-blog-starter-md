@@ -153,3 +153,84 @@ $wx = \text{"bab"}\in\Sigma^*$ by clause 2
 Therefore, $\text{"bab"}\in\Sigma^*$.
 
 **(c)** Is $\text{"abc"}\in\Sigma^*$? Give your reason using the definition.
+- $c\notin\Sigma$L c isn't one of the alphabet's symbols . $\Sigma=\{a,b\}$
+- $abc\notin\Sigma^*$: the string isn' in the set.
+
+$abc$ isn't $\varepsilon$, so clause 1 doesn't give it. Clause 2 can only produce it from x = c, which sin't allowed because $c\notin\Sigma$. By clause 3, nothing else is in $\Sigma^*$. Therefore, $abc\notin\Sigma^*$.
+
+----
+
+#### Milestone 2
+**The setup:**
+- The alphabet is now $\Sigma=\{0,1\}$. The symbols are 0 and 1, not a and b.
+- We're defining a new set **S**, the binary string that start with 1.
+- We'll keep the same placeholders: **w** = a string already built, and x = one symbol.
+
+**Clause 1:** the basis
+The question to ask is: **what's the shortest string that starts with 1?**
+$\varepsilon$ has no symbols, so it doesn't start with anything. It can't be in S.
+1 has a length 1 and starts with 1.
+
+So the basis is:
+1. 1 $\in$ S
+This is the main difference from $\Sigma^*$. There, the basis was $\varepsilon$. Here we start one step further along, because S should only contain strings that already begin correctly.
+
+**Clause 2:** the inductive clause
+If a string already starts with 1, what can I do to it so it still starts with 1?
+
+Adding a symbol to the end never changes the first symbol:
+- 1 $\to$ 10 or 11, both still starting with 1.
+- 10 $\to$ 100 or 101, both still starting with 1.
+
+It doesn't matter whether we add 0 or 1, so x can be any symbol in $\Sigma$:
+2. If w $\in$ S and x $\in\Sigma$, then $wx \in$ S.
+
+*Compare it with the $\Sigma^*$ clause: it's identical except for the name of the set.
+The only real change. from $\Sigma^*$ is the basis.*
+
+**Clause 3:** the extremal clause
+3. Nothing else is in S
+*This is what keeps out $\varepsilon$, 0, 01, and so on.*
+
+**The finished definition**
+1. 1 $\in S$
+2. If w $\in S$ and $x\in\Sigma$, then $wx \in S$
+3. Nothing else is in S.
+
+**Task:** Show 101 $\in S$ with a build-sequence table.
+
+**Step 1:** Start with the basis
+1 $\in S$, by clause 1.
+
+**Step 2:** Add the second symbol.
+$w=1$ (in $S$ from step 1)
+x = 0 (0 $\in \Sigma$)
+
+So,
+$wx = 10\in S$ by clause 2.
+
+**Step 3:** Add the last symbol.
+$w = 10$ (in $S$ from step 2)
+x = 1 (1 $\in \Sigma$)
+
+So,
+$wx = 101 \in S$ by clause 2.
+
+Therefore, 101 $\in S$.
+
+| Step | String      | Reason                  |
+| ---- | ----------- | ----------------------- |
+| 1    | 1 $\in S$   | Clause 1                |
+| 2    | 10 $\in S$  | Clause 2, w = 1, x = 0  |
+| 3    | 101 $\in S$ | Clause 2, w = 10, x = 1 |
+**Task:** Show 01 $\notin S$. Use the three-step pattern.
+Clause 1 only gives 1, and 01 $\neq$ 1. 
+
+Clause 2 produces strings of the form $wx$ with $w\in S$ and $x\in \Sigma$. To get 01, wed need $w=0$ and $x=1$. $x=1$ is fine since $1\in\Sigma$, but $0\notin S$. Every element of S starts with 1, because the basis does and clause 2 only adds to the end. So clause 2 can't produce 01.
+
+Clause 3: By the extremal clause, nothing else is in $S$. Therefore, $01\notin S$.
+
+----
+
+##### Practical User (Sections 8.3–8.4)
+**Part A: Backus-Naur Form (BNF)**

@@ -129,3 +129,41 @@ The field (or fields) on which the ordering is based.
 ### Selection Sort
 Given a list of values, put them in ascending order
 - Find the value that comes first, and write it into a second array
+- Delete the value from the original list
+- Continue this cycle until all the values on the original list have and written into the second list, at which point the second list contains the same items but in sorted order.
+
+Each time, we are **selecting** the smallest value to place into the current index.
+
+>A slight adjustment to this approach does away with the need to duplicate space: Instead of writing the smallest value to a second list, exchange it with the value currently in the position where it should be placed.
+
+
+![[Pasted image 20261123143644.png|500]]
+
+```
+SET currentIndex TO 0
+WHILE (not sorted yet)
+	FIND smallest unsorted item
+	Swap currentIndex item with smallest
+	SET currentIndex TO currentIndex + 1
+```
+
+```
+SET currentIndex TO 0
+WHILE (currentIndex < length(myArray))
+	SET indexOfSmallest TO currentIndex
+	SET index TO currentIndex + 1
+	WHILE (index < length(myArray))
+		IF (myArray[index] < myArray[indexOfSmallest])
+			SET indexOfSmallest TO index
+		SET index TO index + 1
+	SWAP myArray[currentIndex] WITH myArray[indexOfSmallest]
+	SET currentIndex to currentIndex + 1
+```
+
+### Swap
+```
+SET temp TO data[currentIndex]
+SET data[currentIndex] TO data[indexOfSmallest]
+SET data[indexOfSmallest] TO temp
+```
+
