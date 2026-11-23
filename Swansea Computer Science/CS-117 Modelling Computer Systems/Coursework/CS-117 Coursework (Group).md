@@ -13,6 +13,12 @@ group-work: true
 
 > [!info] Group work
 > This coursework is done in **groups**. If you don't have one yet, Eike opened a Canvas discussion to find a group — post a short reply there, or email him if you still have no group by early next week.
+> *Update 17 Nov:* most people now have a group — if you still don't, **contact Eike** and he'll put you with others in the same situation.
+
+> [!important] Submission format (announced 18 Nov)
+> - Submit a **PDF** only (convert scans/photos to PDF).
+> - **Hand-written solutions are accepted** if clearly legible.
+> - Compress it — aim for **≤ 2 MB**.
 
 ## Group
 - Members:

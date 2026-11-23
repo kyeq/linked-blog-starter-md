@@ -26,8 +26,8 @@ added: 2026-11-17
 ## Related
 - Previous week: [[CS-107/Week 8 - High Level Languages & Limits of Computing/Week 8 – Materials|Week 8 – High Level Languages & Limits of Computing]]
 
-> [!warning] Coming up
-> **Coursework 2 – Getting it Running & Everyday Use** opens **Thu 19 Nov, 14:00** · due **Thu 3 Dec, 14:00**.
+> [!warning] Coursework 2 is open
+> [[CS-107/Coursework/Coursework 2 – Getting it Running & Everyday Use|Coursework 2 – Getting it Running & Everyday Use]] opened **Thu 19 Nov, 14:00** · due **Thu 3 Dec, 14:00** (one-attempt Canvas quiz).
 
 ## My notes
 

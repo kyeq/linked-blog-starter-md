@@ -63,3 +63,13 @@ First, we arrange digits in a 2D rectangular pattern of a set width:
 ![[Pasted image 20261120101420.png|73]]
 
 Parity digits are calculated by summing each row and then each column separately, providing the check digit as we go:
+
+![[Pasted image 20261120101518.png|455]]
+
+123347460 is the message to be transmitted.
+
+TODO: Finish notes.
+
+----
+
+# Comparing Algorithms
