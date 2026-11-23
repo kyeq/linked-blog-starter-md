@@ -200,7 +200,6 @@ Things that are related belong in the same group.
 	 **Reflexive:** every number has a loop ($1\to1$, $2\to2$, $\dots$)
 	 **Symmetric:** the only arrows are loops, and a loop is its own return arrow.
 	 **Transitive:** the only two-step paths are like $1\to1\to1$, and the shortcut $1\to1$ exists.
-
 2. **Universal (U)**
 	 **Reflexive:** every number is related to everything, including itself.
 	 **Symmetric:** every possible arrow exists, so every return arrow exists too.
