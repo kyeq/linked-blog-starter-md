@@ -234,3 +234,81 @@ Clause 3: By the extremal clause, nothing else is in $S$. Therefore, $01\notin S
 
 ##### Practical User (Sections 8.3–8.4)
 **Part A: Backus-Naur Form (BNF)**
+
+Sometimes, we write definitions in three clauses.
+That gets long, so computer scientists use a shorthand called **BNF.** 
+It's exactly the same thing in one line.
+
+For example,
+
+| Three clauses                                                                                                                                | BNF                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| 1.     $\varepsilon\in\Sigma^*$<br>2.    If w $\in \Sigma^*$ and x $\in\Sigma$, then wx $\in\Sigma^*$<br>3.    Nothing else is in $\Sigma^*$ | w :: = $\varepsilon$ \| wa \| wb |
+**How to read it:**
+- `w ::=` means "a string w can be..."
+- `|` means "or". It separates the different ways to build one.
+-  $\varepsilon$ is the **basis**, with no w on the right-hand side.
+- `wa` and `wb` are the **inductive** cases: 
+	- "take a w you already have, and add a (or b) to the end."
+- **The extremal clause isn't written.** It's always assumed in BNF.
+
+The "$x\in\Sigma$" choice has turned into one option per symbol:
+`wa | wb`. BNF lists the choices instead of using x.
+
+❓ **How to tell basis from inductive:** an option with **no** copy of the thing being defined on the right is a basis case. An option **with** a copy (here, `w` appears inside `wa`) is an inductive case.
+
+**Exercise**
+What's the set **S** (binary strings starting with 1, over $\Sigma=\{0,1\}$) in BNF.
+
+✅
+`w ::= 1 | w0 | w1`
+
+❌ 
+`w ::= {0, 1} | w0 | w1`
+*because...*
+
+{0, 1} is a **set**, not a string. Each option in BNF must be one string (or string pattern). {0, 1} is the *alphabet*, a set of symbols.
+
+Even read as "0 or 1" let's in too much. If both 0 and 1 were basic cases, then 0 would be in S, and so would 01 and 00, and so on. But S is meant to be only strings that start with 1. (Remember basis clause $1\in S$)
+
+**Exercise**
+Using `w ::= {0, 1} | w0 | w1`, how would you build `1001`?
+
+| Step | String | Option used    |
+| ---- | ------ | -------------- |
+| 1    | 1      | 1 (basis)      |
+| 2    | 10     | w0, with w=1   |
+| 3    | 100    | w0, with w=10  |
+| 4    | 1001   | w1, with w=100 |
+
+----
+##### Part B: Data types (Section 8.4)
+Most data types in programming are defined inductively, and BNF is how they're written. The main example is lists.
+
+**Lists**
+A list of natural numbers is either:
+- the empty list `[ ]`, or
+- a number $n$ stuck on the front of a list $\ell$ you already have, written `n : l`
+
+in BNF:
+`l :: = [ ] | n : l`
+Read `:` as "**cons**", or "put on the front of". It works the same way as before:
+- `[ ]` is the **basis**, since there's no $\ell$ on the right
+- `n : l` is **inductive**, since it uses an $\ell$ you've already built
+
+💡 **One difference from strings:** strings grew by adding to the end (`w0`). 
+Lists grow by adding to the front (`n : l`). Both work; it's a choice made in the definition.
+
+What `[3, 5]` really means
+`[3, 5]` is just a shorthand. Built with only `[ ]` and `:`, it is:
+`3 : (5 : [ ])`
+
+**Building it step by step:**
+
+| Step | List                    | Option used                         |
+| ---- | ----------------------- | ----------------------------------- |
+| 1    | `[ ]`                   | `[ ]` (basis)                       |
+| 2    | `3 : [ ] = [5]`         | `n : l`, with n = 5, $\ell$ = `[ ]` |
+| 3    | `3 : (5 : []) = [3, 5]` | `n : l`, with n = 3, $\ell$ = `[5]` |
+ Because we add to the front, we build from the last element back to the first.
+ 5 goes on first, then 3 goes in front of it.
