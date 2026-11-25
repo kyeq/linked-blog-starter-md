@@ -457,4 +457,44 @@ For example, `product([2, 3, 4]) = 24`.
 > *Remember, the basis value should be the number that doesn't change the answer under the operation being used.*
 
 `product(n : ℓ) = n * product(ℓ)` 
-``
+
+here's its working out:
+
+```
+product([2, 8, 5])
+= product(2 : (8 : (5 : [ ])))    unpack
+= 2 * product(8 : (5 : [ ]))      n = 2, ℓ = 8 : (5 : [ ])
+= 2 * (8 * product(5 : [ ]))      n = 8, ℓ = 5 : [ ]
+= 2 * (8 * (5 * product([ ])))    n = 5, ℓ = [ ]
+= 2 * (8 * (5 * 1)).              basis: product([ ]) = 1
+= 80
+```
+
+Therefore, `product([2, 8, 5]) = 80`
+
+----
+##### Factorial on N
+It's essentially the same idea, but a different set.
+Remember how N is built:
+
+```
+basis : 0
+inductive n + 1 (built from n)
+```
+
+A function on $\mathbb{N}$ needs one equation for 0 and one for **n + 1**. 
+Factorial is defined like this:
+
+```
+0! = 1
+(n + 1)! = (n + 1) * n!
+``` 
+
+Compare with lists:
+
+|                 | Lists   | $\mathbb{N}$ |
+| --------------- | ------- | ------------ |
+| Basis case      | `[ ]`   | `0`          |
+| Inductive case  | `n : ℓ` | `n + 1`      |
+| "Smaller piece" | ℓ       | n            |
+
