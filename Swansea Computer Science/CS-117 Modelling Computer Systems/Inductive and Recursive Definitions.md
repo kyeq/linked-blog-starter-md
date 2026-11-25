@@ -359,7 +359,7 @@ length(n : ℓ) = 1 + length(ℓ)   <- use if the list is something : something
 `length([a, b, c])`
 `= length(a : (b : (c : [ ])))`
 
-**Step 2. Match the pattern** (The list inside isa `a : (b : (c : [ ])))`. 
+**Step 2. Match the pattern** (The list inside is a `a : (b : (c : [ ])))`. 
 That has the form `n : ℓ` with:
 - **n = a** (the thing before the first `:`)
 - **ℓ = b : (c : \[ ])** (everything after the first `:`)
@@ -371,6 +371,34 @@ So we use the second equation, `length(n : ℓ) = 1 + length(ℓ)`
 The `a` has been "used up" and turned into `1 +`. The list inside `length` is now shorter.
 
 
+**Step 3.** 
+The new innermost bit is now `n : ℓ`.
+`n` is now "b", and `ℓ` is now `c : [ ]`
+
+it's now:
+`1 + 1 + length(c : [ ])`
+
+**Step 4.**
+The new innermost bit is still `n : ℓ`.
+`n` is now "c", and ℓ is `[ ]`.
+
+it's now:
+`1 + 1 + 1 + length([ ])`,
+therefore the the length is 3.
+
+###### Finding the sum of BNF
+Let's say we want to find the sum of `[2, 8, 5]`
+It's essentially the same as finding the length (the same steps), except each step adds `n` instead of 1:
+
+```
+sum([2, 8, 5])
+= sum(2 : (8 : (5 : [ ])))          unpack
+= 2 + sum(8 : (5 : [ ]))            n = 2,  ℓ = 8 : (5 : [ ])
+= 2 + (8 + sum(5 : [ ]))            n = 8,  ℓ = 5 : [ ]
+= 2 + (8 + (5 + sum([ ])))          n = 5,  ℓ = [ ]
+= 2 + (8 + (5 + 0))                 basis: sum([ ]) = 0
+= 15
+```
 
 ----
 
@@ -420,3 +448,13 @@ graph TD
   A["node"] --> E["•"]
 ```
 
+----
+##### Writing your own functions
+**Task:** define `product`, which multiplies all the numbers in a list.
+For example, `product([2, 3, 4]) = 24`.
+
+`product([]) = 1` 
+> *Remember, the basis value should be the number that doesn't change the answer under the operation being used.*
+
+`product(n : ℓ) = n * product(ℓ)` 
+``
