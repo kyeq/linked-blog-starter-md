@@ -498,3 +498,50 @@ Compare with lists:
 | Inductive case  | `n : ℓ` | `n + 1`      |
 | "Smaller piece" | ℓ       | n            |
 
+Instead of unpacking a list, you write the number as **(something) + 1**, then use the inductive equation on the smaller number.
+
+```
+3!
+= (2 + 1)!           write 3 as 2 + 1
+= 3 x 2!             inductive, n = 2
+= 3 x (2 x 1!)       inductive, n = 1  (2 = 1 + 1)
+= 3 x (2 x (1 x 0!)) inductive, n = 0  (1 = 0 + 1)
+= 3 x (2 x (1 x 1))  basis: 0! = 1
+= 6
+```
+
+The basis is **1** for the same reason as product: factorial multiplies, so it starts from the number that doesn't change a product.
+
+**Exercise**
+Work out 4!
+
+```
+4!
+= (3 + 1)!                 write 4 as 3 + 1
+= 4 x 3!                   inductive, n = 3
+= 4 x (3 x 2!)             inductive, n = 2
+= 4 x (3 x (2 x 1!))       inductive, n = 1
+= 4 x (3 x (2 x (1 x 0!))) inductive, n = 0
+= 4 x (3 x (2 x (1 x 1)))  basis: 0! = 1
+= 24
+```
+
+Work out 6!
+
+```
+6!
+= (5 + 1)!                              write 6 as 5 + 1
+= 6 x 5!                                inductive, n = 5
+= 6 x (5 x 4!)                          inductive, n = 4
+= 6 x (5 x (4 x 3!))                    inductive, n = 3
+= 6 x (5 x (4 x (3 x 2!)))              inductive, n = 2
+= 6 x (5 x (4 x (3 x (2 x 1!))))        inductive, n = 1
+= 6 x (5 x (4 x (3 x (2 x (1 x 0!)))))  inductive, n = 0
+= 6 x (5 x (4 x (3 x (2 x (1 x 1)))))   basis: 0! = 1
+= 720
+```
+
+> Note: Factorial on $\mathbb{N}$ is essentially counting down from $n$. ($n=n-1$)
+
+
+

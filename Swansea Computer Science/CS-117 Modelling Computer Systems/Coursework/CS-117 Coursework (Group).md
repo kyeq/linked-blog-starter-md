@@ -4,24 +4,138 @@ released: 2026-11-13
 due: 2026-11-27
 group-work: true
 ---
-#CS117 
+>[!info] Task
+>Fix a set $\mathbb{V}$ of propositional variables. Recall that propositional formulas can be defined inductively as follows:
+>
+>$p,q ::= \text{true} \mid \text{false} \mid P, (P \in \mathcal{V}) \mid p \lor q \mid p \land q \mid p \Rightarrow q \mid \neg p$
+>
+>Let us denote by Form the set of formulas thus defined. Observe that in the lectures we also introduced the connective $\leftrightarrow$, which we will not include for the purpose of this assignment. Consider the subset $Form_0 \subseteq Form$ which is inductively defined as follows:
+>
+>$p,q ::= \text{false} \mid P, (P \in \mathcal{V}) \mid p \Rightarrow q$
 
-# CS-117 Coursework (Group)
-> [!warning] Open now
-> Opened **Fri 13 Nov, 09:00** · Due **Fri 27 Nov, 14:00** · [Canvas assignment](https://canvas.swansea.ac.uk/courses/68208/assignments/695633)
-> Coursework sheet: [CS-117-Coursework-2026.pdf](https://canvas.swansea.ac.uk/courses/68208/files/12241894) (✅ unlocked — save it into this folder).
+>[!important] Task 1
+>Inductively define a function $f : Form \to Form_0$ that takes as input a formula $p$ and outputs an equivalent formula $f(p)$.
+>
+>**Hint.** First think about how you can define the other propositional connectives in terms of the connective $\Rightarrow$ and the constant "false".
 
-> [!info] Group work
-> This coursework is done in **groups**. If you don't have one yet, Eike opened a Canvas discussion to find a group — post a short reply there, or email him if you still have no group by early next week.
-> *Update 17 Nov:* most people now have a group — if you still don't, **contact Eike** and he'll put you with others in the same situation.
+1. Check if they're base or inductive & small formula count.
 
-> [!important] Submission format (announced 18 Nov)
-> - Submit a **PDF** only (convert scans/photos to PDF).
-> - **Hand-written solutions are accepted** if clearly legible.
-> - Compress it — aim for **≤ 2 MB**.
+| Option          | Base or inductive? | Small formula count? |
+| --------------- | ------------------ | -------------------- |
+| true            | base               | 0                    |
+| false           | base               | 0                    |
+| P               | base               | 0                    |
+| p $\lor$ q      | inductive          | 2 (p, q)             |
+| p $\land$ q     | inductive          | 2 (p, q)             |
+| p $\Rightarrow$ | inductive          | 2 (p, q)             |
+| $\neg$p         | inductive          | 1 (p)                |
 
-## Group
-- Members:
+2. Check whether it is allowed in the target set.
 
-## My notes
+| Form option       | in Form0?          |     |
+| ----------------- | ------------------ | --- |
+| true              | ==🔴no== ==🟢yes== |     |
+| false             | ==🟢yes==          |     |
+| P                 | ==🟢yes==          |     |
+| p $\lor$ q        | ==🔴no==           |     |
+| p $\land$ q       | ==🔴no==           |     |
+| p $\Rightarrow$ q | ==🟢yes==          |     |
+| $\neg$p           | ==🔴no== ==🟢yes== |     |
+$\text{A function }f : \text{Form} \to \text{Form}_0 \text{ defined inductively is as follows:}$
+
+- `f(true) = false`$\Rightarrow$`false`
+- `f(false) = false`
+- `f(P) = P`
+- `f(p`$\Rightarrow$`q) = f(p)`$\Rightarrow$`f(q)
+- `f(`$\neg$`p) = f(p)`$\Rightarrow$`false`
+- `f(p`$\lor$`q) =` `f(p`$\lor$`q) =` `(f(p)`$\Rightarrow$`false)`$\Rightarrow$ `f(q)`
+- `f(p`$\land$`q)  = (f(p)`$\Rightarrow$`(f(q)`$\Rightarrow$`false))` $\Rightarrow$ `false`
+
+-----
+##### Practice Question
+
+>[!info] Practice Task
+>Fix a set $\mathbb{V}$ of propositional variables. Recall that propositional formulas can be defined inductively as follows:
+>
+>$p,q ::= \text{true} \mid \text{false} \mid P, (P \in \mathcal{V}) \mid p \lor q \mid p \land q \mid p \Rightarrow q \mid \neg p$
+>
+>Let us denote by Form the set of formulas thus defined. Observe that in the lectures we also introduced the connective $\leftrightarrow$, which we will not include for the purpose of this task. Consider the subset $Form_N \subseteq Form$ which is inductively defined as follows:
+>
+>$p,q ::= \text{false} \mid P, (P \in \mathcal{V}) \mid \neg p \mid p \land q$
+>
+
+>[!important] Question 1
+>**1.** Inductively define a function $f_N : Form \to Form_N$ that takes as input a formula $p$ and outputs an equivalent formula $f_N(p)$.
+>
+>**Hint.** First think about how you can define the other propositional connectives in terms of the connectives $\neg$, $\land$ and the constant "false".
+
+
+**Step 1. Check if they're base or inductive & how many small formulas they have.**
+
+| Option | Base or inductive? | How many smaller formulas? |
+| ------ | ------------------ | -------------------------- |
+| true   | base               | 0                          |
+| false  | base               | 0                          |
+| P      | base               | 0                          |
+| p ∨ q  | inductive          | 2 (p, q)                   |
+| p ∧ q  | inductive          | 2 (p, q)                   |
+| p ⇒ q  | inductive          | 2 (p, q)                   |
+| ¬p     | inductive          | 1 (p)                      |
+|        |                    |                            |
+
+**Step 2. The base cases**
+For each option, check whether it is allowed in the target set.
+1. Yes: copy it across unchanged.
+2. No: find an equivalent formula built only from allowed parts, and check it with a truth table.
+
+
+| Form option       | In Form0? | What to do                                                                   |
+| ----------------- | --------- | ---------------------------------------------------------------------------- |
+| true              | ❌ no ✅    | rebuild using false and $\Rightarrow$                                        |
+| false             | ✅ yes     | copy it: f(false) = false                                                    |
+| P                 | ✅ yes     | copy it: f(P) = P                                                            |
+| p $\lor$ q        | ❌ no      | rebuild using false and $\Rightarrow$                                        |
+| p $\land$ q       | ❌ no      | rebuild using false and $\Rightarrow$                                        |
+| p $\Rightarrow$ q | ✅ yes     | keep the $\Rightarrow$, but apply f to both sides<br>f(p) $\Rightarrow$ f(q) |
+| $\neg$p           | ❌ no      | rebuild using false and $\Rightarrow$                                        |
+
+to build **true:**
+`f(true) = false`$\Rightarrow$`false`
+
+to build $\neg$ p:
+`f(`$\neg$`p) = p`$\Rightarrow$`false`
+
+| p   | q   | p $\Rightarrow$ q | p $\Rightarrow$ false | $\neg$ p |
+| --- | --- | ----------------- | --------------------- | -------- |
+| T   | T   | T                 | F                     | F        |
+| F   | T   | T                 | T                     | T        |
+| T   | F   | F                 | F                     | F        |
+| F   | F   | T                 | T                     | T        |
+
+to build $\lor$:
+`f(p`$\lor$`q) =` `(f(p)`$\Rightarrow$`false)`$\Rightarrow$ `f(q)`
+
+| p   | q   | $\neg$ p | $\neg$ q | p $\Rightarrow$ q | p $\Rightarrow$ $\neg$ q | $\neg$ p $\Rightarrow$ q | p $\lor$ q |
+| --- | --- | -------- | -------- | ----------------- | ------------------------ | ------------------------ | ---------- |
+| T   | T   | F        | F        | T                 | F                        | T                        | T          |
+| F   | T   | T        | F        | T                 | T                        | T                        | T          |
+| T   | F   | F        | T        | F                 | T                        | T                        | T          |
+| F   | F   | T        | T        | T                 | T                        | F                        | F          |
+
+
+to build $\land$:
+f(p $\Rightarrow$ (q$\Rightarrow$false)) $\Rightarrow$ false
+
+| p   | q   | $\neg$ p | $\neg$ q | p $\Rightarrow$ q | $\neg$ (p $\Rightarrow$ $\neg$ q) | p $\land$ q |
+| --- | --- | -------- | -------- | ----------------- | --------------------------------- | ----------- |
+| T   | T   | F        | F        | T                 | T                                 | T           |
+| F   | T   | T        | F        | T                 | F                                 | F           |
+| T   | F   | F        | T        | F                 | F                                 | F           |
+| F   | F   | T        | T        | T                 | F                                 | F           |
+
+
+>[!important] Question 2
+>**2.** Prove by induction that your function $f$ indeed maps every formula $p$ to an
+equivalent formula $f (p)$. Use truth tables to justify that two given formulas
+are equivalent.
 
