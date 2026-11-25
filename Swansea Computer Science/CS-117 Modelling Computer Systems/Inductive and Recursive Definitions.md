@@ -339,6 +339,39 @@ therefore, `[2, 8, 5, 2]` is:
 
 > Note: because there are rules set in-place (using only `[ ]`, and `:`), each number must take a step back.
 
+###### Finding the length of BNF
+To find the length of BNF, you should use **pattern matching**. You need to look inside of `length(...)`, decide which equation it matches, and replace it with that equation's right-hand side. Then you repeat.
+
+The two equations:
+```
+length([ ]) = 0    <- use if the list is empty 
+length(n : ℓ) = 1 + length(ℓ)   <- use if the list is something : something
+```
+
+**The procedure**
+1. **Unpack** the list into `:` and `[ ]` form.
+2. Look at innermost `length( ... )`. Is the list inside it `[ ]`, or does it look like `n : ℓ`?
+3. If it's `n : ℓ`, work out what n and ℓ are, then replace `length(n : ℓ)` with `1 + length(ℓ)`.
+4. If it's `[ ]`, replace `length([ ])` with `0`.
+5. Repeat until there's no `length` left, then add up.
+
+**Step 1. Unpack**
+`length([a, b, c])`
+`= length(a : (b : (c : [ ])))`
+
+**Step 2. Match the pattern** (The list inside isa `a : (b : (c : [ ])))`. 
+That has the form `n : ℓ` with:
+- **n = a** (the thing before the first `:`)
+- **ℓ = b : (c : \[ ])** (everything after the first `:`)
+
+So we use the second equation, `length(n : ℓ) = 1 + length(ℓ)`
+```
+= 1 + length(b : (c : [ ]))
+```
+The `a` has been "used up" and turned into `1 +`. The list inside `length` is now shorter.
+
+
+
 ----
 
 ##### Part C: Binary trees (Example 8.7)
@@ -363,5 +396,27 @@ graph TD
   A --> C["node"]
   C --> D["•"]
   C --> E["•"]
+```
+
+**Exercise**
+What's `((•, •) , •)` as a tree?
+- Left subtree: `(•, •)`
+- Right subtree: •
+
+As a table:
+
+| Step | Left (already have) | Right (already have) | Result      |
+| ---- | ------------------- | -------------------- | ----------- |
+| 1    | n/a                 | n/a                  | •           |
+| 2    | •                   | •                    | (•, •)      |
+| 3    | (•, •)              | •                    | ((•, •), •) |
+
+
+```mermaid
+graph TD
+  A["node"] --> B["node"]
+  B["node"] --> C["•"]
+  B["node"] --> D["•"]
+  A["node"] --> E["•"]
 ```
 
