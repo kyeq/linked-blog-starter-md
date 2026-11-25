@@ -310,5 +310,58 @@ What `[3, 5]` really means
 | 1    | `[ ]`                   | `[ ]` (basis)                       |
 | 2    | `3 : [ ] = [5]`         | `n : l`, with n = 5, $\ell$ = `[ ]` |
 | 3    | `3 : (5 : []) = [3, 5]` | `n : l`, with n = 3, $\ell$ = `[5]` |
- Because we add to the front, we build from the last element back to the first.
- 5 goes on first, then 3 goes in front of it.
+Because we add to the front, we build from the last element back to the first.
+5 goes on first, then 3 goes in front of it. 
+
+**Exercise**
+1. Write `[4, 7]` using only `[ ]` and `:`.
+2. Make a build table for it, like the one above.
+
+`[4, 7]` is:
+`4 : (7: [ ])`
+
+step by step:
+
+| Step | List                    | Option used                     |
+| ---- | ----------------------- | ------------------------------- |
+| 1    | `[ ]`                   | `[ ]` (basis)                   |
+| 2    | `7 : [ ] = [7]`         | `n : l`, with n=7, $\ell$=`[ ]` |
+| 3    | `4 : (7 : []) = [4, 7]` | `n : l`, with n=4, $\ell$=`[7]` |
+
+1. Write `[2, 8, 5]` using only `[ ]` and `:`.
+2. Make a build table for it, like the one above.
+
+`[2, 8, 5]` is:
+`2 : (8 : (5 : [ ]))`
+
+therefore, `[2, 8, 5, 2]` is:
+`2 : (8 : (5 : (2 : [ ])))`
+
+> Note: because there are rules set in-place (using only `[ ]`, and `:`), each number must take a step back.
+
+----
+
+##### Part C: Binary trees (Example 8.7)
+Binary trees are the last data type at this level. A binary tree is either:
+- a **leaf**, written `•`, or
+- a **node** joining a left tree and a right tree, written $(t_1, t_2)$
+
+**An example: building** (•, (•, •))
+Read t the same way as the lists, from the inside out:
+
+| Step | Left (already have) | Right (already have) | Result      |
+| ---- | ------------------- | -------------------- | ----------- |
+| 1    | n/a                 | n/a                  | • (basis)   |
+| 2    | •                   | •                    | (•, •)      |
+| 3    | •                   | (•, •)               | (•, (•, •)) |
+
+As a picture, each `( , )` is a node with two branches:
+
+```mermaid
+graph TD
+  A["node"] --> B["•"]
+  A --> C["node"]
+  C --> D["•"]
+  C --> E["•"]
+```
+

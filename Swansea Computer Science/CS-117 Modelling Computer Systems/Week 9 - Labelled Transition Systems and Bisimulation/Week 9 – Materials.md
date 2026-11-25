@@ -18,10 +18,13 @@ added: 2026-11-17
 - [ ] [[Problem-Sheet-15.pdf]] ([Canvas](https://canvas.swansea.ac.uk/courses/68208/files/12255974))
 
 ## Quiz
-- No Week 9 quiz on Canvas yet.
+- [ ] **Week 9 Quiz** – ✅ open now (since Mon 23 Nov, 09:00) · due **Fri 27 Nov, 17:00** (closes 17:30) → [Canvas quiz](https://canvas.swansea.ac.uk/courses/68208/assignments/697587)
 
 ## Related
 - [[CS-117 Coursework (Group)|Group coursework]] – due **Fri 27 Nov, 14:00**
+
+## Next
+- [[CS-117 Modelling Computer Systems/Week 10 - Modal Logic & Concurrency/Week 10 – Materials|Week 10 – Modal Logic & Concurrency]]
 
 ## My notes
 

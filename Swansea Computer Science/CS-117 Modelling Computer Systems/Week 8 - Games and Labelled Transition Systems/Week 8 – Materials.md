@@ -22,6 +22,11 @@ quiz-due: 2026-11-20
 - [ ] Problems 1–3
 - [ ] Problems 8–11
 - [ ] Problems 13–15
+- [ ] Check answers → **Solutions released** – [Problem-Sheet-13-Solutions.pdf (Canvas)](https://canvas.swansea.ac.uk/courses/68208/files/12271277)
+
+## Lecture recordings (added on Canvas)
+- [ ] [15 – Two Player Games (recording)](https://canvas.swansea.ac.uk/courses/68208/files/12275697)
+- [ ] [16 – Two Player Games II (recording)](https://canvas.swansea.ac.uk/courses/68208/files/12275700)
 
 ## Quiz
 - [ ] **Week 8 Quiz** – ✅ open now (since Mon 16 Nov) · due **Fri 20 Nov, 17:00** → [Canvas quiz](https://canvas.swansea.ac.uk/courses/68208/assignments/696164)

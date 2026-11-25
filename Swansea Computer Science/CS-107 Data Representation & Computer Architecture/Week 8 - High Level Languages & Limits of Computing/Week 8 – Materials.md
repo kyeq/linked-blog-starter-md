@@ -18,7 +18,7 @@ added: 2026-11-13
 ## Lab
 - [ ] **Worksheet 8: Limitations of Computing** – ✅ now available → [CS-107-WS8-limits.pdf](https://canvas.swansea.ac.uk/courses/68187/files/11968879)
 	- save as `Worksheet 8 - Limitations of Computing.pdf`
-- Solutions – still locked on Canvas.
+- Solutions – 🔒 unlock **Thu 26 Nov, 09:00** → [Canvas file](https://canvas.swansea.ac.uk/courses/68187/files/11968979)
 
 ## Extra materials (Canvas pages)
 - High-Level Languages: Materials
