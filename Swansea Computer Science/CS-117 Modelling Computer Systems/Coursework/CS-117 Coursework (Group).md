@@ -142,5 +142,20 @@ f(p $\Rightarrow$ (q$\Rightarrow$false)) $\Rightarrow$ false
 equivalent formula $f (p)$. Use truth tables to justify that two given formulas
 are equivalent.
 
+**For false**. f(p) = false – *by definition of f*
+Since false $\equiv$ false, we have f(false) $\equiv$ false
+
+**For** 
+
+
+
 **For p $\lor$ q**. Assume f(p) $\equiv$ p and f(q) $\equiv$ q 
-$\equiv$ $\neg$($\neg$p $\lor$ $\neg$q) = $\neg$($\neg$f(p)$\lor \neg$f(q))  
+$\equiv$ $\neg$($\neg$p $\lor$ $\neg$q) = $\neg$($\neg$f(p)$\lor \neg$f(q)) – *by definition of f*
+$\equiv$ p $\lor$ q (by the truth table below)
+
+| p   | q   | $\neg$ ($\neg$ p $\land$ $\neg$ q) | p $\lor$ q |
+| --- | --- | ---------------------------------- | ---------- |
+| T   | T   | T                                  | T          |
+| T   | F   | T                                  | T          |
+| F   | T   | T                                  | T          |
+| F   | F   | F                                  | F          |
