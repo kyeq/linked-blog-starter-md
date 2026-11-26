@@ -86,7 +86,16 @@ Both columns match,
 therefore `f(P) `$\equiv$ `P
 
 Case **p** $\Rightarrow$ **q**:
-`f(p`$\Rightarrow$`
+`f(p`$\Rightarrow$`q) = f(p)`$\Rightarrow$`f(q)` – *by definition of f*
+
+| p   | f(p) | q   | f(q) | f(p) $\land$ f(q) | p $\land$ q |
+| --- | ---- | --- | ---- | ----------------- | ----------- |
+| T   | T    |     |      |                   |             |
+| T   | T    |     |      |                   |             |
+| F   | F    |     |      |                   |             |
+| F   |      |     |      |                   |             |
+
+
 
 Case **true**:
 `f(true) = false`$\Rightarrow$`false` – *by definition of f*
