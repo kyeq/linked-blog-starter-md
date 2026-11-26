@@ -66,6 +66,28 @@ $\text{A function }f : \text{Form} \to \text{Form}_0 \text{ defined inductively 
 >Whatever formula you feed into f, what comes out should mean the same thing. It should have the same T/F in every row of a truth table. f changes how the formula looks
 >(only false and $\Rightarrow$ allowed!), never what it *means*.
 
+Case **false**:
+`f(false)` = `false` – *by definition of f* 
+
+| false | f(false) = false |
+| ----- | ---------------- |
+| F     | F                |
+The last two columns match,
+therefore `f(false)` $\equiv$ `false`
+
+Case **P** (for each P $\in \mathbb{V}$):
+`f(P) = P`  – *by definition of f*
+
+| P   | f(P) = P |
+| --- | -------- |
+| T   | T        |
+| F   | F        |
+Both columns match,
+therefore `f(P) `$\equiv$ `P
+
+Case **p** $\Rightarrow$ **q**:
+`f(p`$\Rightarrow$`
+
 Case **true**:
 `f(true) = false`$\Rightarrow$`false` – *by definition of f*
 
@@ -73,10 +95,10 @@ Case **true**:
 | ----- | ----- | ------------------------- | ---- |
 | F     | F     | T                         | T    |
 The last two columns match,
-therefore `f(true)` $\equiv$ true
+therefore `f(true)` $\equiv$ `true`
 
-Case: **P**
-`f(P) = P` 
+
+
 
 
 
