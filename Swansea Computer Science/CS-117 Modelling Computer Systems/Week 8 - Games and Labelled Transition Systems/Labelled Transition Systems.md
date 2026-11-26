@@ -87,3 +87,16 @@ This puzzle can be solved by modelling it with a labelled transition system (LTS
 - $c$ = the man crosses the river with the cabbage.
 
 ![[Pasted image 20261118203017.png]]
+### Cops and Robbers
+Three cops are transporting three robbers to jail on foot through a jungle when they come upon a river. They have a boat, but it can only hold two people. The problem is: the robbers can never be allowed to outnumber the cops on either side of the river. Each cop and each robber can row the boat.
+
+So, **how can all six get across the river?**
+
+This puzzle can be solved by modelling it with an LTS (Labelled Transition System), in which a state represents the current positions of the six people and the boat (left or right bank), and there are five events representing the five possible actions that can happen:
+
+- $c$ = one cop crosses the river on their own;
+- $cc$ = two cops cross the river;
+- $r$ = one robber crosses the river on their own;
+- $rr$ = two robbers cross the river;
+- $cr$ = one cop and one robber cross the river
+
