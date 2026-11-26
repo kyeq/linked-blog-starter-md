@@ -139,3 +139,4 @@ f(p $\Rightarrow$ (q$\Rightarrow$false)) $\Rightarrow$ false
 equivalent formula $f (p)$. Use truth tables to justify that two given formulas
 are equivalent.
 
+ **hello**
