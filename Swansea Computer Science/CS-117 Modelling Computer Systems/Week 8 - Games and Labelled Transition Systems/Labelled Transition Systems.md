@@ -100,3 +100,15 @@ This puzzle can be solved by modelling it with an LTS (Labelled Transition Syste
 - $rr$ = two robbers cross the river;
 - $cr$ = one cop and one robber cross the river
 
+**Solution**
+![[Pasted image 20261126090356.png]]
+A (shortest) solution: $cr,c,rr,r,cc,cr,cc,r,rr,r,rr.$
+
+### Water Jugs
+In the 1995 film Die Hard: With a Vengence, New York Detective john McClane (played by Bruce Willis) and Harlem dry cleaner Zeus Carver (played by Samuel L. Jackson) had to solve the following problem in order to prevent a bomb from exploding at a public fountain.
+
+Given only a five-gallon jug and a three-gallon jug, neither with any markings on them, they had to fill the larger jug with exactly four gallons of water from the fountain, and place it onto a scale in order to stop the bomb's timer and prevent disaster.
+
+**How did they manage this feat?**
+A state of the system underlying this riddle consists of a pair of integers (i, j) with 0 $\leq$ i $\leq$ 5 and 0 $\leq$ j $\leq$ 3, representing the volume of water in the 5-gallon and 3-gallon jugs $
+
