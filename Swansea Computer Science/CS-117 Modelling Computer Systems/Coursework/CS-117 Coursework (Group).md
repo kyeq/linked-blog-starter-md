@@ -53,6 +53,13 @@ $\text{A function }f : \text{Form} \to \text{Form}_0 \text{ defined inductively 
 - `f(p`$\lor$`q) =` `f(p`$\lor$`q) =` `(f(p)`$\Rightarrow$`false)`$\Rightarrow$ `f(q)`
 - `f(p`$\land$`q)  = (f(p)`$\Rightarrow$`(f(q)`$\Rightarrow$`false))` $\Rightarrow$ `false`
 
+>[!important] Task 2
+>Prove by induction that your function $f$ indeed maps every formula $p$ to an equivalent formula $f(p)$. Use truth tables to justify that two given formulas are equivalent.
+>
+>In other words, prove that your function 
+
+
+
 -----
 ##### Practice Question
 
