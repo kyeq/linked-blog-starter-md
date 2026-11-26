@@ -142,3 +142,5 @@ f(p $\Rightarrow$ (q$\Rightarrow$false)) $\Rightarrow$ false
 equivalent formula $f (p)$. Use truth tables to justify that two given formulas
 are equivalent.
 
+**For p $\lor$ q**. Assume f(p) $\equiv$ p and f(q) $\equiv$ q 
+$\equiv$ $\neg$($\neg$p $\lor$ $\neg$q) = $\neg$($\neg$f(p)$\lor \neg$f(q))  
