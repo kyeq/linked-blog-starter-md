@@ -148,8 +148,23 @@ Since false $\equiv$ false, we have f(false) $\equiv$ false
 **For P** (for each P $\in \mathcal{V}$). f(P) = P – *by definition of f*
 Since P $\equiv$ P, we have f(P) $\equiv$ P
 
-**For true.** f(true) = false $\Rightarrow$ false – *by induction hypothesis*
+**For true.** f(true) = false $\Rightarrow$ false – *by definition of f*
 
+| false | false | false $\Rightarrow$ false | true |
+| ----- | ----- | ------------------------- | ---- |
+| F     | F     | T                         | T    |
+The last two columns match, 
+therefore f(true) $\equiv$ true
+
+**For $\neg$ p**. f($\neg$p) = p $\Rightarrow$ false $\equiv$ $\neg$p – *by inductive hypothesis, we can prove it through:*
+
+| p   | q   | p $\Rightarrow$ q | p $\Rightarrow$ false | $\neg$ p |
+| --- | --- | ----------------- | --------------------- | -------- |
+| T   | T   | T                 | F                     | F        |
+| F   | T   | T                 | T                     | T        |
+| T   | F   | F                 | F                     | F        |
+| F   | F   | T                 | T                     | T        |
+Since 
 
 
 **For p $\lor$ q**. Assume f(p) $\equiv$ p and f(q) $\equiv$ q 
