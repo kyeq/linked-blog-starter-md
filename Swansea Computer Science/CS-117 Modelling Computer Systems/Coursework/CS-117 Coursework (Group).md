@@ -1,5 +1,7 @@
 ---
-tags: [CS117, coursework]
+tags:
+  - CS117
+  - coursework
 released: 2026-11-13
 due: 2026-11-27
 group-work: true
