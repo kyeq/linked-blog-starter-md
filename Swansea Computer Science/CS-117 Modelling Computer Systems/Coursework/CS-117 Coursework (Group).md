@@ -111,6 +111,7 @@ to build $\neg$ p:
 | F   | T   | T                 | T                     | T        |
 | T   | F   | F                 | F                     | F        |
 | F   | F   | T                 | T                     | T        |
+|     |     |                   |                       |          |
 
 to build $\lor$:
 `f(p`$\lor$`q) =` `(f(p)`$\Rightarrow$`false)`$\Rightarrow$ `f(q)`
