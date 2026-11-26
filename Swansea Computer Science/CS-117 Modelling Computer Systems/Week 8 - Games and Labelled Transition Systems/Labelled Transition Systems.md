@@ -115,5 +115,12 @@ A state of the system underlying this riddle consists of a pair of integers (i, 
 There are six possible moves from a given state (i, j):
 ![[Pasted image 20261126091415.png]]
 ### Modelling an Elevator
+
 Here is a very simplistic model of an elevator servicing three floors which reflects only its movement:
+
 ![[Labelled Transition Systems 2026-11-26 09.16.15.excalidraw]]
+
+And here is a very refined model which takes into account the door:
+
+![[Labelled Transition Systems 2026-11-26 09.23.46.excalidraw]]
+
