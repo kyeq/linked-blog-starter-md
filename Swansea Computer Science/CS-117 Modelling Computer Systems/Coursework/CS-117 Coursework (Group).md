@@ -54,9 +54,23 @@ $\text{A function }f : \text{Form} \to \text{Form}_0 \text{ defined inductively 
 - `f(p`$\land$`q)  = (f(p)`$\Rightarrow$`(f(q)`$\Rightarrow$`false))` $\Rightarrow$ `false`
 
 >[!important] Task 2
->Prove by induction that your function $f$ indeed maps every formula $p$ to an equivalent formula $f(p)$. Use truth tables to justify that two given formulas are equivalent.
+>**Prove by induction** that your function $f$ indeed maps every formula $p$ to an equivalent formula $f(p)$. **Use truth tables to justify that two given formulas are equivalent.**
 >
->In other words, prove that your function 
+
+>In other words, prove that your function:
+>(function is Form, not $Form_0$)
+>
+>(the seven equations written in Q1)
+>maps to every formula p to an equivalent formula f(p)
+>
+>Whatever formula you feed into f, what comes out should mean the same thing. It should have the same T/F in every row of a truth table. f changes how the formula looks
+>(only false and $\Rightarrow$ allowed!), never what it *means*.
+
+
+
+
+
+
 
 
 
