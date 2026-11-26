@@ -124,3 +124,4 @@ And here is a very refined model which takes into account the door:
 
 ![[Labelled Transition Systems 2026-11-26 09.23.46.excalidraw]]
 
+
