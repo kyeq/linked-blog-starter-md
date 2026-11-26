@@ -110,5 +110,10 @@ In the 1995 film Die Hard: With a Vengence, New York Detective john McClane (pla
 Given only a five-gallon jug and a three-gallon jug, neither with any markings on them, they had to fill the larger jug with exactly four gallons of water from the fountain, and place it onto a scale in order to stop the bomb's timer and prevent disaster.
 
 **How did they manage this feat?**
-A state of the system underlying this riddle consists of a pair of integers (i, j) with 0 $\leq$ i $\leq$ 5 and 0 $\leq$ j $\leq$ 3, representing the volume of water in the 5-gallon and 3-gallon jugs $
+A state of the system underlying this riddle consists of a pair of integers (i, j) with 0 $\leq$ i $\leq$ 5 and 0 $\leq$ j $\leq$ 3, representing the volume of water in the 5-gallon and 3-gallon jugs $A$ and $B$, respectively. The initial state is ($0, 0$) and the final state you wish to reach is ($4, 0$).
 
+There are six possible moves from a given state (i, j):
+![[Pasted image 20261126091415.png]]
+### Modelling an Elevator
+Here is a very simplistic model of an elevator servicing three floors which reflects only its movement:
+![[Labelled Transition Systems 2026-11-26 09.16.15.excalidraw]]
