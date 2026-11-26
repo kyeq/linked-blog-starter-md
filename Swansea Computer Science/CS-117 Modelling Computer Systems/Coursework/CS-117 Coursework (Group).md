@@ -45,10 +45,10 @@ group-work: true
 | $\neg$p           | ==🔴no== ==🟢yes== |     |
 $\text{A function }f : \text{Form} \to \text{Form}_0 \text{ defined inductively is as follows:}$
 
-- `f(true) = false`$\Rightarrow$`false`
 - `f(false) = false`
 - `f(P) = P`
 - `f(p`$\Rightarrow$`q) = f(p)`$\Rightarrow$`f(q)
+- `f(true) = false`$\Rightarrow$`false`
 - `f(`$\neg$`p) = f(p)`$\Rightarrow$`false`
 - `f(p`$\lor$`q) =` `f(p`$\lor$`q) =` `(f(p)`$\Rightarrow$`false)`$\Rightarrow$ `f(q)`
 - `f(p`$\land$`q)  = (f(p)`$\Rightarrow$`(f(q)`$\Rightarrow$`false))` $\Rightarrow$ `false`
@@ -145,7 +145,10 @@ are equivalent.
 **For false**. f(p) = false – *by definition of f*
 Since false $\equiv$ false, we have f(false) $\equiv$ false
 
-**For** 
+**For P** (for each P $\in \mathcal{V}$). f(P) = P – *by definition of f*
+Since P $\equiv$ P, we have f(P) $\equiv$ P
+
+**For true.** f(true) = false $\Rightarrow$ false – *by induction hypothesis*
 
 
 
