@@ -15,6 +15,7 @@ group-work: true
 >
 >$p,q ::= \text{false} \mid P, (P \in \mathcal{V}) \mid p \Rightarrow q$
 
+
 >[!important] Task 1
 >Inductively define a function $f : Form \to Form_0$ that takes as input a formula $p$ and outputs an equivalent formula $f(p)$.
 >
@@ -91,15 +92,15 @@ For each option, check whether it is allowed in the target set.
 2. No: find an equivalent formula built only from allowed parts, and check it with a truth table.
 
 
-| Form option       | In Form0? | What to do                                                                   |
-| ----------------- | --------- | ---------------------------------------------------------------------------- |
-| true              | ❌ no ✅    | rebuild using false and $\Rightarrow$                                        |
-| false             | ✅ yes     | copy it: f(false) = false                                                    |
-| P                 | ✅ yes     | copy it: f(P) = P                                                            |
-| p $\lor$ q        | ❌ no      | rebuild using false and $\Rightarrow$                                        |
-| p $\land$ q       | ❌ no      | rebuild using false and $\Rightarrow$                                        |
-| p $\Rightarrow$ q | ✅ yes     | keep the $\Rightarrow$, but apply f to both sides<br>f(p) $\Rightarrow$ f(q) |
-| $\neg$p           | ❌ no      | rebuild using false and $\Rightarrow$                                        |
+| Form option       | In Form0? | What to do                                                                   |     |
+| ----------------- | --------- | ---------------------------------------------------------------------------- | --- |
+| true              | ❌ no ✅    | rebuild using false and $\Rightarrow$                                        |     |
+| false             | ✅ yes     | copy it: f(false) = false                                                    |     |
+| P                 | ✅ yes     | copy it: f(P) = P                                                            |     |
+| p $\lor$ q        | ❌ no      | rebuild using false and $\Rightarrow$                                        |     |
+| p $\land$ q       | ❌ no      | rebuild using false and $\Rightarrow$                                        |     |
+| p $\Rightarrow$ q | ✅ yes     | keep the $\Rightarrow$, but apply f to both sides<br>f(p) $\Rightarrow$ f(q) |     |
+| $\neg$p           | ❌ no      | rebuild using false and $\Rightarrow$                                        |     |
 
 to build **true:**
 `f(true) = false`$\Rightarrow$`false`
