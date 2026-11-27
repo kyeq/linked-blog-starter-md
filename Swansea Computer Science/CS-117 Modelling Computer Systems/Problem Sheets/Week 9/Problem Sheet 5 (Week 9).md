@@ -95,3 +95,8 @@ In order to get everyone across, we can follow these step 7 steps:
 >
 >How can the queen and her children escape from the tower?
 
+
+| Step | People |
+| ---- | ------ |
+|      |        |
+
