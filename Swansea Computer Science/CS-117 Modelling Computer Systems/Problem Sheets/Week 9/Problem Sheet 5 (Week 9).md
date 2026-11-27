@@ -43,3 +43,6 @@ Let "G" represent a green frog, "B" represent a brown frog, and "\_" represent a
 >Is it possible to find a walk through the city that would **cross each bridge and only once?** The islands cannot be reached by any means other than the bridges; and every bridge must be crossed completely every time – e.g., you cannot walk halfway onto a bridge then turn around and later cross the other half from the other side.
 
 ![[Problem Sheet 5 (Week 9) 2026-11-27 10.42.03.excalidraw]]
+
+It is mathematically impossible to walk through every landmass and cross each and every bridge once and only once, where there are an uneven amount of bridges. This is because:
+
