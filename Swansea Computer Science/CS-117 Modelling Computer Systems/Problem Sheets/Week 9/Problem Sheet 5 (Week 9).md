@@ -10,8 +10,13 @@
 >- It can perform a larger jump and leap over a single frog of a *different* colour (on an adjacent lily pad) to land on the next lily pad if it is empty.
 >  
 >How can the frogs carry out this task?
->![[]]
+>
+>![[frog-pictures.png]]
 
+
+| Move | Action | State |
+| ---- | ------ | ----- |
+|      |        |       |
 
 
 
