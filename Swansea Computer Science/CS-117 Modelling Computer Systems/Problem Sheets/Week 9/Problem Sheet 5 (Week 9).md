@@ -13,10 +13,26 @@
 >
 >![[frog-pictures.png]]
 
+Let "G" represent a green frog, "B" represent a brown frog, and "\_" represent an empty lily pad. 
 
-| Move | Action | State |
-| ---- | ------ | ----- |
-|      |        |       |
+| Move | Action            | State    |
+| ---- | ----------------- | -------- |
+| 0    | start             | GGG_BBB  |
+| 1    | G hops 3 $\to$ 4  | GG_GBBB  |
+| 2    | B jumps 5 $\to$ 3 | GGBG_BB  |
+| 3    | B hops 6 $\to$ 5  | GGBGB_B  |
+| 4    | G jumps 4 $\to$ 6 | GGB_BGB  |
+| 5    | G jumps 2 $\to$ 4 | G_BGBGB  |
+| 6    | G hops 1 $\to$ 2  | \_GBGBGB |
+| 7    | B jumps 3 $\to$ 1 | BG_GBGB  |
+| 8    | B jumps 5 $\to$ 3 | BGBG_GB  |
+| 9    | B jumps 7 $\to$ 5 |          |
+| 10   |                   |          |
+| 11   |                   |          |
+| 12   |                   |          |
+| 13   |                   |          |
+| 14   |                   |          |
+| 15   |                   |          |
 
 
 
