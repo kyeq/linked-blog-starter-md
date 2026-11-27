@@ -44,5 +44,4 @@ Let "G" represent a green frog, "B" represent a brown frog, and "\_" represent a
 
 ![[Problem Sheet 5 (Week 9) 2026-11-27 10.42.03.excalidraw]]
 
-It is mathematically impossible to walk through every landmass and cross each and every bridge once and only once, where there are an uneven amount of bridges. This is because:
-
+It is mathematically impossible to 
