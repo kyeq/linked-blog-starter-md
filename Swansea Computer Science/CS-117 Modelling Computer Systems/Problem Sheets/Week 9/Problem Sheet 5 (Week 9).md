@@ -91,12 +91,15 @@ In order to get everyone across, we can follow these step 7 steps:
 >[!success] Question 3 complete
 
 >[!important] Question 4
->A queen, her son, and her daughter are being held captive in the tower of a castle. Outside the tower window is a rope running over a pulley with baskets of equal weight attached to the ends of the rope. One basket is empty and is just outside the window, while the other basket is on the ground with a 30 kg rock in it. People can be safely lowered to the ground in a basket using the other basket as a lighter counterbalance as long as the difference in weight between the two baskets does not exceed 6 kg. If one basket is more than 6 kg heavier than the other, anyone in the heavier basket would be mortally wounded when their basket hits the ground. The queen weighs 78 kg, her daughter 42 kg and her son 36 kg. Each basket can hold two people, or one person and the rock. 
+>A queen, her son, and her daughter are being held captive in the tower of a castle. Outside the tower window is a rope running over a pulley with baskets of equal weight attached to the ends of the rope. 
+>
+>One basket is empty and is just outside the window, while the other basket is on the ground with a 30 kg rock in it. People can be safely lowered to the ground in a basket using the other basket as a lighter counterbalance as long as the difference in weight between the two baskets does not exceed 6 kg. If one basket is more than 6 kg heavier than the other, anyone in the heavier basket would be mortally wounded when their basket hits the ground. The queen weighs 78 kg, her daughter 42 kg and her son 36 kg. Each basket can hold two people, or one person and the rock. 
 >
 >How can the queen and her children escape from the tower?
 
 
-| Step | People |
-| ---- | ------ |
-|      |        |
+| Step | People  | Basket 1 Weight |     | Exited | Basket 2 Weight |
+| ---- | ------- | --------------- | --- | ------ | --------------- |
+| 0    | Q, S, D | 0kg             |     | none   |                 |
+| 1    | S       | 36kg            |     |        |                 |
 
