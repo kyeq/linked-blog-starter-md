@@ -15,6 +15,7 @@ group-work: true
 >
 >$p,q ::= \text{false} \mid P, (P \in \mathcal{V}) \mid p \Rightarrow q$
 
+
 >[!important] Task 1
 >Inductively define a function $f : Form \to Form_0$ that takes as input a formula $p$ and outputs an equivalent formula $f(p)$.
 >
