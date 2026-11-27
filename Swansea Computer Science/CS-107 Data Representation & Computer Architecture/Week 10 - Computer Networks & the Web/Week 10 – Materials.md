@@ -7,11 +7,13 @@ added: 2026-11-24
 
 # Week 10 – Computer Networks & the Web
 > [!info] Final week of CS-107 teaching
-> Published on Canvas (spotted 24 Nov). Lecture PDF isn't downloaded yet — grab it from the link below and drop it into this folder.
+> Published on Canvas (spotted 24 Nov). Lecture PDFs aren't downloaded yet — grab them from the links below and drop them into this folder.
 
 ## Lectures
 - [ ] **Lecture 28 & 29** – Computer Networks; Building Web Pages → [Canvas file](https://canvas.swansea.ac.uk/courses/68187/files/12282222)
 	- save as `Lecture 28-29 - Computer Networks & Building Web Pages.pdf`
+- [ ] **Lecture 30** – Exam prep and revision → [Canvas file](https://canvas.swansea.ac.uk/courses/68187/files/12294159) *(added 27 Nov)*
+	- save as `Lecture 30 - Exam Prep & Revision.pdf`
 
 ## Lab
 - [ ] **Worksheet 10: Computer networks and the web** – 🔒 unlocks **Mon 30 Nov, 09:00** → [Canvas file](https://canvas.swansea.ac.uk/courses/68187/files/11968881)
