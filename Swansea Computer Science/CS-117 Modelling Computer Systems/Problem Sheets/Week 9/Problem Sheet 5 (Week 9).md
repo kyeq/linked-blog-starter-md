@@ -44,4 +44,4 @@ Let "G" represent a green frog, "B" represent a brown frog, and "\_" represent a
 
 ![[Problem Sheet 5 (Week 9) 2026-11-27 10.42.03.excalidraw|388]]
 
-It is mathematically impossible to cross every bridge once and only once whilst visiting every landmass. Because 
+It is mathematically impossible to cross every bridge once and only once whilst visiting every landmass. How many bridges touch each landmass is what matters – 
