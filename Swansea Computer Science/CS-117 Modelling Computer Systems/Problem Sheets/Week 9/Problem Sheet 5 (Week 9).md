@@ -42,7 +42,6 @@ Let "G" represent a green frog, "B" represent a brown frog, and "\_" represent a
 >
 >Is it possible to find a walk through the city that would **cross each bridge and only once?** The islands cannot be reached by any means other than the bridges; and every bridge must be crossed completely every time – e.g., you cannot walk halfway onto a bridge then turn around and later cross the other half from the other side.
 
-![[Problem Sheet 5 (Week 9) 2026-11-27 10.42.03.excalidraw|388]]
 
 It is mathematically impossible to cross every bridge once and only once whilst visiting every landmass. How many bridges touch each landmass is what matters – this is called the landmass's degree.
 
@@ -71,6 +70,28 @@ Model the landmasses as vertices and the bridges as edges. The degrees are A = 3
 >
 >How can they all get across the river?
 
+![[Problem Sheet 5 (Week 9) 2026-11-27 13.23.03.excalidraw|564]]
 
+In order to get everyone across, we can follow these step 7 steps:
+- let A be Alice
+- let B be Bob
+- let C be Carol
+- let D be Dave
 
+| Step | People            | Crossed    |
+| ---- | ----------------- | ---------- |
+| 0    | A, B, C, D        | none       |
+| 1    | A & B $\to$ cross | A, B       |
+| 2    | A $\to$ go back   | B          |
+| 3    | A & C $\to$ cross | A, B, C    |
+| 4    | A $\to$ go back   | B, C       |
+| 5    | D $\to$ cross     | B, C, D    |
+| 6    | C $\to$ go back   | B, D       |
+| 7    | A & C $\to$ cross | A, B, C, D |
+>[!success] Question 3 complete
+
+>[!important] Question 4
+>A queen, her son, and her daughter are being held captive in the tower of a castle. Outside the tower window is a rope running over a pulley with baskets of equal weight attached to the ends of the rope. One basket is empty and is just outside the window, while the other basket is on the ground with a 30 kg rock in it. People can be safely lowered to the ground in a basket using the other basket as a lighter counterbalance as long as the difference in weight between the two baskets does not exceed 6 kg. If one basket is more than 6 kg heavier than the other, anyone in the heavier basket would be mortally wounded when their basket hits the ground. The queen weighs 78 kg, her daughter 42 kg and her son 36 kg. Each basket can hold two people, or one person and the rock. 
+>
+>How can the queen and her children escape from the tower?
 
