@@ -46,10 +46,31 @@ Let "G" represent a green frog, "B" represent a brown frog, and "\_" represent a
 
 It is mathematically impossible to cross every bridge once and only once whilst visiting every landmass. How many bridges touch each landmass is what matters – this is called the landmass's degree.
 
-
 | Landmass | Bridges       | Degree  |
 | -------- | ------------- | ------- |
 | A        | 1, 2, 3       | 3 (odd) |
 | B        | 1, 2, 4, 5, 6 | 5 (odd) |
 | C        | 3, 4, 7       | 3 (odd) |
-| D        |               |         |
+| D        | 5, 6, 7       | 3 (odd) |
+Each landmass has an odd degree, so it's impossible.
+If you took away bridge 4 – you would now have 6 bridges, and 4 landmasses. 
+
+Model the landmasses as vertices and the bridges as edges. The degrees are A = 3, B = 5, C = 3, D = 3. An Euler path exists in a connected graph only if it has exactly 0 or 2 vertices of odd degree. This graph has 4, so no such route exists.
+
+>[!success] Question 2 complete
+
+>[!important] Question 3
+>Alice, Bob, Carol and Dave want to cross a river in a boat.
+>However, their boat can only hold 100 kg.
+>- Alice is 46kg
+>- Bob is 49kg
+>- Carol is 52kg
+>- Dave is 60kg
+>  
+>Bob has a broken arm and can't row.
+>
+>How can they all get across the river?
+
+
+
+
