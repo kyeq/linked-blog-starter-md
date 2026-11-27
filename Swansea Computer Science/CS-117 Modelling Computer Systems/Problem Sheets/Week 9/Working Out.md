@@ -27,4 +27,9 @@ Jug 1 is full.
 | 2    | 53   | pour 5L jug into 3L jug | (3, 2, 3)          |
 | 3    | 38   | pour 3L jug into 8L jug | (6, 2, 0)          |
 | 4    | 53   | pour 5L jug into 3L jug | (6, 0, 2)          |
-| 5    | 85   | pour 8L jug into        |                    |
+| 5    | 85   | pour 8L jug into 5L jug | (1, 5, 2)          |
+| 6    | 53   | pour 5L jug into 3L jug | (1, 4, 3)          |
+| 7    | 38   | pour 3L jug into 8L jug | (4, 4, 0)          |
+Reading from left to right: 
+`85533853855338`
+![[Pasted image 20261127142824.png]]
