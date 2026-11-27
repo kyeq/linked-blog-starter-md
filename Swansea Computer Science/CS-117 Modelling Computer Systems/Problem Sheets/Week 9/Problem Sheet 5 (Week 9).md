@@ -98,8 +98,9 @@ In order to get everyone across, we can follow these step 7 steps:
 >How can the queen and her children escape from the tower?
 
 
-| Step | People  | Basket 1 Weight |     | Exited | Basket 2 Weight |
-| ---- | ------- | --------------- | --- | ------ | --------------- |
-| 0    | Q, S, D | 0kg             |     | none   |                 |
-| 1    | S       | 36kg            |     |        |                 |
+| Step | People  | Basket 1 Weight | Basket 2 Weight | Ground |
+| ---- | ------- | --------------- | --------------- | ------ |
+| 0    | Q, S, D | 30kg            | 0kg             |        |
+| 1    | S       | 30kg            | 36kg            | S      |
+| 2    | S, Q    | 30kg            |                 |        |
 
