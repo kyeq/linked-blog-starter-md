@@ -78,29 +78,16 @@ In order to get everyone across, we can follow these step 7 steps:
 - let C be Carol
 - let D be Dave
 
-| Step | People            | Crossed    |
-| ---- | ----------------- | ---------- |
-| 0    | A, B, C, D        | none       |
-| 1    | A & B $\to$ cross | A, B       |
-| 2    | A $\to$ go back   | B          |
-| 3    | A & C $\to$ cross | A, B, C    |
-| 4    | A $\to$ go back   | B, C       |
-| 5    | D $\to$ cross     | B, C, D    |
-| 6    | C $\to$ go back   | B, D       |
-| 7    | A & C $\to$ cross | A, B, C, D |
+| Step | Move        | Near bank  | Far bank   | Boat |
+| ---- | ----------- | ---------- | ---------- | ---- |
+| 0    | –           | A, B, C, D | –          | near |
+| 1    | A & B cross | C, D       | A, B       | far  |
+| 2    | A returns   | A, C, D    | B          | near |
+| 3    | A & C cross | D          | A, B, C    | far  |
+| 4    | A returns   | A, D       | B, C       | near |
+| 5    | D crosses   | A          | B, C, D    | far  |
+| 6    | C returns   | A, C       | B, D       | near |
+| 7    | A & C cross | –          | A, B, C, D | far  |
+
 >[!success] Question 3 complete
-
->[!important] Question 4
->A queen, her son, and her daughter are being held captive in the tower of a castle. Outside the tower window is a rope running over a pulley with baskets of equal weight attached to the ends of the rope. 
->
->One basket is empty and is just outside the window, while the other basket is on the ground with a 30 kg rock in it. People can be safely lowered to the ground in a basket using the other basket as a lighter counterbalance as long as the difference in weight between the two baskets does not exceed 6 kg. If one basket is more than 6 kg heavier than the other, anyone in the heavier basket would be mortally wounded when their basket hits the ground. The queen weighs 78 kg, her daughter 42 kg and her son 36 kg. Each basket can hold two people, or one person and the rock. 
->
->How can the queen and her children escape from the tower?
-
-
-| Step | People  | Basket 1 Weight | Basket 2 Weight | Ground |
-| ---- | ------- | --------------- | --------------- | ------ |
-| 0    | Q, S, D | 30kg            | 0kg             |        |
-| 1    | S       | 30kg            | 36kg            | S      |
-| 2    | S, Q    | 30kg            |                 |        |
 
